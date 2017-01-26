@@ -130,7 +130,7 @@ $text .= "<div style='cursor:hand' onClick=\"expandit('guests')\"><table style='
 
 
 
-                        $online_location_page = eregi_replace(".php", "", substr(strrchr($online_location, "/"), 1));
+                        $online_location_page = preg_replace(".php", "", substr(strrchr($online_location, "/"), 1));
 
                         if($online_location_page == "log" || $online_location_page == "error"){ $online_location = "news.php"; $online_location_page = "news";  }
 
